@@ -1,0 +1,48 @@
+set term qt
+
+enable line:
+with lines
+
+enable points
+with points
+
+enable lines and points:
+with linespoints
+or
+with pointslines
+
+line type:
+line		dashtype 0
+dashed		dashtype 1
+dotted		dashtype 2
+dash-dot	dashtype 3
+dash-dot-dot	dashtype 4
+
+line width:
+any decimal d > 0	linewidth d
+
+axis range:
+[xmin:xmax][ymin:ymax]
+
+dot type:
+plus			pointtype 1
+cross			pointtype 2
+asterisk		pointtype 3
+square			pointtype 4
+filled square		pointtype 5
+circle 			pointtype 6
+filed circle		pointtype 7
+triangle up		pointtype 8
+filled triangle up	pointtype 9
+triangle down		pointtype 10
+filled triangle down	pointtype 11
+diamond			pointtype 12
+filled diamond		pointtype 13
+pentagon		pointtype 14
+filled pentagon		pointtype 15
+
+use legend
+
+example:
+
+plot [:][:] 'data.dat' with linespoints pointtype 2 pointsize 1 linewidth 1 dashtype 1 linecolor rgb "red" title "test plot"
